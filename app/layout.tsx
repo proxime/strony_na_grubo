@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { montserrat } from '@assets/fonts';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import '@styles/globals.css';
 
@@ -16,6 +17,7 @@ export default function RootLayout({
     return (
         <html lang="pl">
             <body className={montserrat.className}>{children}</body>
+            <SpeedInsights />
         </html>
     );
 }
