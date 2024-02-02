@@ -3,6 +3,7 @@ import { montserrat } from '@assets/fonts';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import '@styles/globals.css';
+import { Navbar } from './components/Navbar/Navbar';
 
 export const metadata: Metadata = {
     title: 'Strony Na Grubo',
@@ -16,8 +17,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="pl">
-            <body className={montserrat.className}>{children}</body>
-            <SpeedInsights />
+            <body className={montserrat.className}>
+                <Navbar />
+                {children}
+                <SpeedInsights />
+            </body>
         </html>
     );
 }

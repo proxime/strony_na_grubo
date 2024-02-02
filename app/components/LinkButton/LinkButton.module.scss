@@ -1,0 +1,17 @@
+.button {
+    height: 58px;
+    border: 1px solid var(--button-border);
+    background-color: var(--button-bg);
+    color: var(--white);
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 20px;
+    line-height: 1.2em;
+    transition: all 0.3s ease-in-out;
+}

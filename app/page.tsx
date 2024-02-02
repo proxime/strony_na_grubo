@@ -1,7 +1,11 @@
+import { WelcomeBanner } from '@components/WelcomeBanner/WelcomeBanner';
+import { StarsCanvas } from './components/StarBackground/StarBackground';
+
 export default function Home() {
     return (
-        <div>
-            Dzień dobry <a href="/">test</a>
-        </div>
+        <main>
+            <WelcomeBanner />
+            <StarsCanvas />
+        </main>
     );
 }

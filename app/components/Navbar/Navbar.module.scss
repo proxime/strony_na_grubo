@@ -1,0 +1,30 @@
+.navbar {
+    backdrop-filter: blur(108.19999694824219px);
+    box-shadow:
+        inset 50px 50px 55px 0 rgba(0, 0, 0, 0.05),
+        inset -50px -50px 50px 0 rgba(0, 0, 0, 0.05);
+    background: rgba(11, 10, 7, 0.01);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    padding: 0 var(--page-padding);
+    margin: 0 auto;
+    height: 80px;
+}
+
+.links {
+    align-items: center;
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+}
+
+.logo {
+    display: flex;
+}
