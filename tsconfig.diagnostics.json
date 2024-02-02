@@ -1,0 +1,11 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "pretty": true,
+        "noEmit": true,
+        "diagnostics": true,
+        "incremental": false
+    },
+    "include": ["app"],
+    "exclude": ["node_modules"]
+}
