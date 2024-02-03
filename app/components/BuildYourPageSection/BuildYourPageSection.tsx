@@ -3,6 +3,7 @@ import { Section } from '../Section/Section';
 import { ProjectSteps } from '../ProjectSteps/ProjectSteps';
 import { projectStepsData } from './BuildYourPageSection.data';
 import { LinkButton } from '../LinkButton/LinkButton';
+import { WebAnimation } from '../WebAnimation/WebAnimation';
 
 export const BuildYourPageSection = () => {
     return (
@@ -28,6 +29,7 @@ export const BuildYourPageSection = () => {
                     <div className={styles.buttonWrapper}>
                         <LinkButton href={'/'}>Wyceń projekt</LinkButton>
                     </div>
+                    <WebAnimation />
                 </>
             }
         >

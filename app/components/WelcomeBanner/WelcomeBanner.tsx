@@ -21,7 +21,7 @@ export const WelcomeBanner = () => {
                     <LinkButton href={'#contact'}>Wyceń projekt</LinkButton>
                 </div>
 
-                <div className={`${styles.ornament} ${styles.ornament1}`}>
+                <div className={`ornament ${styles.ornament1}`}>
                     <Image
                         alt="ornament"
                         src={'/elipse_blue.svg'}
@@ -30,7 +30,7 @@ export const WelcomeBanner = () => {
                         priority
                     />
                 </div>
-                <div className={`${styles.ornament} ${styles.ornament2}`}>
+                <div className={`ornament ${styles.ornament2}`}>
                     <Image
                         alt="ornament"
                         src={'/elipse_magenta.svg'}
@@ -39,7 +39,7 @@ export const WelcomeBanner = () => {
                         priority
                     />
                 </div>
-                <div className={`${styles.ornament} ${styles.ornament3}`}>
+                <div className={`ornament ${styles.ornament3}`}>
                     <Image
                         alt="ornament"
                         src={'/elipse_blue.svg'}
@@ -48,7 +48,7 @@ export const WelcomeBanner = () => {
                         priority
                     />
                 </div>
-                <div className={`${styles.ornament} ${styles.ornament4}`}>
+                <div className={`ornament ${styles.ornament4}`}>
                     <Image
                         alt="ornament"
                         src={'/elipse_magenta.svg'}

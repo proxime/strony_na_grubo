@@ -1,6 +1,6 @@
 .wrapper {
     height: 100vh;
-    min-height: 600px;
+    min-height: 660px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -42,12 +42,6 @@
     display: grid;
     grid-template-columns: 250px 250px;
     gap: 30px;
-}
-
-.ornament {
-    pointer-events: none;
-    position: absolute;
-    z-index: -1;
 }
 
 .ornament1 {

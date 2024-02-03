@@ -6,7 +6,7 @@ import { Points, PointMaterial } from '@react-three/drei';
 import { random } from 'maath';
 import styles from './StarBackground.module.scss';
 
-const sphere = random.inSphere(new Float32Array(5000), { radius: 1.2 });
+const sphere = random.inSphere(new Float32Array(1700 * 3), { radius: 1.2 });
 
 const StarBackground = () => {
     const ref = useRef<JSX.IntrinsicElements['points']>(null);
@@ -23,7 +23,7 @@ const StarBackground = () => {
             <Points ref={ref} positions={sphere} stride={3} frustumCulled>
                 <PointMaterial
                     transparent
-                    color="$fff"
+                    color="#fff"
                     size={0.002}
                     sizeAttenuation={true}
                     depthWrite={false}

@@ -7,6 +7,7 @@ export interface PriceCardProps {
     price: string;
     buttonGradient: string;
     options: string[];
+    link: string;
 }
 
 export const PriceCard = ({
@@ -14,6 +15,7 @@ export const PriceCard = ({
     price,
     options,
     buttonGradient,
+    link,
 }: PriceCardProps) => {
     return (
         <div className={styles.wrapper}>
@@ -44,7 +46,7 @@ export const PriceCard = ({
 
             <div className={styles.buttonWrapper}>
                 <LinkButton
-                    href={'/'}
+                    href={link}
                     style={{
                         background: `linear-gradient(${buttonGradient})`,
                     }}

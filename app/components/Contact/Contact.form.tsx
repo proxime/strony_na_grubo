@@ -3,23 +3,44 @@
 import { montserrat } from '@/app/assets/fonts';
 import styles from './Contact.module.scss';
 import Image from 'next/image';
-import { useForm } from 'react-hook-form';
+import { useController, useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 
+import { topicOptions } from './Contact.data';
+import { SelectField } from '../SelectField/SelectField';
+import { useSearchParams } from 'next/navigation';
+import { useEffect } from 'react';
+
 export const ContactForm = () => {
+    const searchParams = useSearchParams();
+    const topic = searchParams.get('topic');
+
     const {
-        formState: { errors, isSubmitted, isValid },
+        formState: { errors },
         handleSubmit,
         register,
-        setError,
+        control,
+        setValue,
     } = useForm<ContactFormValues>({
         resolver: yupResolver(ContactFormSchema),
+    });
+
+    const { field: topicField } = useController({
+        control,
+        name: 'topic',
     });
 
     const handleFormSubmit = handleSubmit((data) => {
         console.log(data);
     });
+
+    useEffect(() => {
+        if (topic) {
+            const value = topicOptions.find(({ value }) => value === topic);
+            value && setValue('topic', value);
+        }
+    }, [topic]);
 
     return (
         <form className={styles.form} onSubmit={handleFormSubmit}>
@@ -33,13 +54,17 @@ export const ContactForm = () => {
                     data-error={!!errors.name}
                 />
                 , jestem zainteresowany/a{' '}
-                <input
-                    {...register('topic')}
-                    type="text"
-                    placeholder="Wybierz temat"
-                    className={`${styles.largeInput} ${montserrat.className}`}
-                    data-error={!!errors.topic}
-                />
+                <div className={styles.selectWrapper}>
+                    <SelectField
+                        options={topicOptions}
+                        error={!!errors.topic}
+                        onChange={(newValue) => topicField.onChange(newValue)}
+                        value={topicField.value}
+                        ref={topicField.ref}
+                        placeholder="Wybierz temat"
+                        instanceId={'topic-select'}
+                    />
+                </div>
             </div>
             <div className={styles.formRow}>
                 Mój adres email to{' '}
@@ -93,7 +118,12 @@ const ContactFormSchema = yup.object({
         .email('Podaj prawidłowy adres email')
         .required('Wprowadź adres email'),
     name: yup.string().trim().required('Wprowadź imię i nazwisko'),
-    topic: yup.string().trim().required('Wybierz temat'),
+    topic: yup
+        .object({
+            value: yup.string().required('Wybierz temat'),
+            label: yup.string().required('Wybierz temat'),
+        })
+        .required('Wybierz temat'),
     message: yup
         .string()
         .trim()
