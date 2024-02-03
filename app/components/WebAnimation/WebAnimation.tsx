@@ -2,11 +2,11 @@
 
 import React from 'react';
 import { useLottie } from 'lottie-react';
-import groovyWalkAnimation from '@assets/animation.json';
+import webAnimation from '@assets/animations/webAnimation.json';
 
 export const WebAnimation = () => {
     const options = {
-        animationData: groovyWalkAnimation,
+        animationData: webAnimation,
         loop: true,
         speed: 0.8,
     };

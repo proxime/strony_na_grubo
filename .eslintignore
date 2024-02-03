@@ -16,3 +16,6 @@ tsconfig.paths.json
 docs/
 README.md
 CHANGELOG.md
+
+# animations
+./app/assets/animations/*
