@@ -6,6 +6,7 @@ export interface SectionProps {
     content: React.ReactNode;
     isReversed?: boolean;
     contentClassName?: string;
+    id?: string;
 }
 
 export const Section = ({
@@ -14,9 +15,11 @@ export const Section = ({
     title,
     isReversed,
     contentClassName,
+    id,
 }: SectionProps) => {
     return (
         <section
+            id={id}
             className={`${styles.wrapper} ${isReversed ? styles.wrapperReversed : ''}`}
         >
             {isReversed && children}

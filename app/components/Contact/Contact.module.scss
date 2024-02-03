@@ -1,0 +1,149 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: var(--max-width);
+    padding: 0 var(--page-padding);
+    text-align: center;
+    margin-top: 100px;
+    padding-top: 100px;
+}
+
+.header {
+    font-weight: 700;
+    font-size: 46px;
+    background: linear-gradient(var(--text-gradient));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 auto;
+    margin-bottom: 90px;
+    width: fit-content;
+}
+
+.form {
+    font-weight: 700;
+    font-size: 22px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    input,
+    textarea {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--button-bg);
+        outline: none;
+        caret-color: var(--pink);
+        color: var(--pink);
+        font-size: 20px;
+
+        &[data-error='true'] {
+            border-color: var(--error);
+
+            &:focus {
+                box-shadow: 0 0 0 1px var(--error);
+            }
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 1px var(--pink);
+        }
+
+        &::placeholder {
+            color: var(--pink);
+            opacity: 1;
+        }
+
+        &::-ms-input-placeholder {
+            color: var(--pink);
+        }
+    }
+
+    input {
+        height: 46px;
+        display: inline-block;
+        margin: 0 6px;
+        min-width: 300px;
+        padding: 10px 20px;
+    }
+
+    textarea {
+        resize: none;
+        height: 260px;
+        padding: 20px;
+    }
+}
+
+.largeInput {
+    flex-grow: 1;
+}
+
+.formRow {
+    display: flex;
+    align-items: center;
+}
+
+.summary {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.checkboxWrapper {
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    gap: 12px;
+    line-height: 24px;
+    user-select: none;
+
+    input {
+        display: none;
+    }
+
+    input:checked ~ .checkboxLabel {
+        background: var(--pink);
+
+        img {
+            display: block;
+        }
+    }
+}
+
+.checkboxLabel {
+    border: 1px solid var(--white);
+    border-radius: 3px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &[data-error='true'] {
+        border-color: var(--error);
+    }
+
+    img {
+        display: none;
+    }
+}
+
+.button {
+    height: 58px;
+    border: 1px solid var(--border);
+    background-color: var(--button-bg);
+    color: var(--white);
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 20px;
+    line-height: 1.2em;
+    transition: all 0.3s ease-in-out;
+}

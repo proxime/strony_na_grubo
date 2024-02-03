@@ -5,6 +5,7 @@ import { Section } from '../Section/Section';
 export const TechnologiesSection = () => {
     return (
         <Section
+            id="technologies"
             contentClassName={styles.content}
             title="Postaw na najlepsze technologie"
             content={

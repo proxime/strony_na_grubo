@@ -7,6 +7,7 @@ import { LinkButton } from '../LinkButton/LinkButton';
 export const BuildYourPageSection = () => {
     return (
         <Section
+            id="offer"
             title="Zbuduj nowoczesną stronę z użyciem Next.js"
             content={
                 <>

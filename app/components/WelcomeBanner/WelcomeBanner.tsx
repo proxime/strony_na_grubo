@@ -15,8 +15,10 @@ export const WelcomeBanner = () => {
                     technologia.
                 </p>
                 <div className={styles.buttons}>
-                    <LinkButton href={'/'}>Dowiedz się więcej</LinkButton>
-                    <LinkButton href={'/'}>Wyceń projekt</LinkButton>
+                    <LinkButton href={'#technologies'}>
+                        Dowiedz się więcej
+                    </LinkButton>
+                    <LinkButton href={'#contact'}>Wyceń projekt</LinkButton>
                 </div>
 
                 <div className={`${styles.ornament} ${styles.ornament1}`}>

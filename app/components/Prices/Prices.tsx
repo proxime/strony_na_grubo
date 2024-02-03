@@ -8,7 +8,7 @@ import styles from './Prices.module.scss';
 
 export const Prices = () => {
     return (
-        <section className={styles.wrapper}>
+        <section id="pricing" className={styles.wrapper}>
             <h2 className={styles.header}>Cennik usług</h2>
             <div className={styles.cards}>
                 <PriceCard

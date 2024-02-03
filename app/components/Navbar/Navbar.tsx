@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import styles from './Navbar.module.scss';
+import Link from 'next/link';
 
 export const Navbar = () => {
     return (
         <nav className={styles.navbar}>
             <div className={styles.wrapper}>
-                <div className={styles.logo}>
+                <Link href={'#welcome'} className={styles.logo}>
                     <Image
                         alt="logo"
                         src={'/logo.svg'}
@@ -13,20 +14,20 @@ export const Navbar = () => {
                         height={52}
                         priority
                     />
-                </div>
+                </Link>
 
                 <ul className={styles.links}>
                     <li>
-                        <a href="/">O nas</a>
+                        <Link href="#about-us">O nas</Link>
                     </li>
                     <li>
-                        <a href="/about">Oferta</a>
+                        <Link href="#offer">Oferta</Link>
                     </li>
                     <li>
-                        <a href="/contact">Cennik</a>
+                        <Link href="#pricing">Cennik</Link>
                     </li>
                     <li>
-                        <a href="/contact">Kontakt</a>
+                        <Link href="#contact">Kontakt</Link>
                     </li>
                 </ul>
             </div>
