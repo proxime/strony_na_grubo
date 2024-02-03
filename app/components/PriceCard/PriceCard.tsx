@@ -1,6 +1,9 @@
+'use client';
+
 import Image from 'next/image';
 import { LinkButton } from '../LinkButton/LinkButton';
 import styles from './PriceCard.module.scss';
+import { motion } from 'framer-motion';
 
 export interface PriceCardProps {
     title: string;
@@ -18,7 +21,23 @@ export const PriceCard = ({
     link,
 }: PriceCardProps) => {
     return (
-        <div className={styles.wrapper}>
+        <motion.div
+            className={styles.wrapper}
+            initial={{
+                opacity: 0,
+                scale: 0.5,
+            }}
+            whileInView={{
+                opacity: 1,
+                scale: 1,
+            }}
+            transition={{
+                bounce: false,
+                ease: 'easeOut',
+                duration: 0.3,
+            }}
+            viewport={{ once: true }}
+        >
             <div className={styles.head}>
                 <h6>{title}</h6>
                 <p>
@@ -54,6 +73,6 @@ export const PriceCard = ({
                     Wycena projektu
                 </LinkButton>
             </div>
-        </div>
+        </motion.div>
     );
 };

@@ -1,0 +1,10 @@
+.wrapper {
+    position: absolute;
+    z-index: -1;
+}
+
+.line {
+    width: 2px;
+    height: 0;
+    background-color: var(--pink);
+}

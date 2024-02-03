@@ -4,6 +4,7 @@ import { ProjectSteps } from '../ProjectSteps/ProjectSteps';
 import { projectStepsData } from './BuildYourPageSection.data';
 import { LinkButton } from '../LinkButton/LinkButton';
 import { WebAnimation } from '../WebAnimation/WebAnimation';
+import { ScrollFollowLine } from '../ScrollFollowLine/ScrollFollowLine';
 
 export const BuildYourPageSection = () => {
     return (
@@ -27,7 +28,7 @@ export const BuildYourPageSection = () => {
                     </span>{' '}
                     staje się nie tyle luksusem, co koniecznością.
                     <div className={styles.buttonWrapper}>
-                        <LinkButton href={'/'}>Wyceń projekt</LinkButton>
+                        <LinkButton href={'#contact'}>Wyceń projekt</LinkButton>
                     </div>
                     <WebAnimation />
                 </>
@@ -35,6 +36,13 @@ export const BuildYourPageSection = () => {
         >
             <div className={styles.stepsWrapper}>
                 <ProjectSteps steps={projectStepsData} />
+                <ScrollFollowLine
+                    maxHeight={990}
+                    position={{
+                        x: 15,
+                        y: 150,
+                    }}
+                />
             </div>
         </Section>
     );

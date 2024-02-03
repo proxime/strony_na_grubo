@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './Footer.module.scss';
+import Link from 'next/link';
 
 export const Footer = () => {
     return (
@@ -20,22 +21,30 @@ export const Footer = () => {
 
                 <div className={styles.content}>
                     <p>
-                        Jestśmy doświadczonymi twórcami stron internetowych z
-                        pięcioletnim doświadczeniem, z pasją do najnowszych
-                        technologii. Naszą misją jest nie tylko tworzenie
+                        Jesteśmy twórcami stron internetowych z pięcioletnim
+                        doświadczeniem. Naszą misją jest nie tylko tworzenie
                         estetycznych i funkcjonalnych witryn, ale także
-                        dostarczanie innowacyjnych rozwiązań. Sprawiają one, że
-                        strony są przyjemne dla oka, a także efektywne i zgodne
-                        z najnowszymi standardami technologicznymi.
+                        dostarczanie innowacyjnych rozwiązań. Rozwiązania te
+                        sprawiają, że strony są przyjemne dla oka, a także
+                        efektywne i zgodne z najnowszymi standardami
+                        technologicznymi.
                     </p>
 
                     <div className={styles.links}>
                         <ul className={styles.list}>
                             <li>Menu</li>
-                            <li>O nas</li>
-                            <li>Oferta</li>
-                            <li>Cennik</li>
-                            <li>Kontakt</li>
+                            <li>
+                                <Link href="#about-us">O nas</Link>
+                            </li>
+                            <li>
+                                <Link href="#offer">Oferta</Link>
+                            </li>
+                            <li>
+                                <Link href="#pricing">Cennik</Link>
+                            </li>
+                            <li>
+                                <Link href="#contact">Kontakt</Link>
+                            </li>
                         </ul>
 
                         <ul className={styles.list}>

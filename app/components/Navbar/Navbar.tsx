@@ -6,7 +6,7 @@ export const Navbar = () => {
     return (
         <nav className={styles.navbar}>
             <div className={styles.wrapper}>
-                <Link href={'#welcome'} className={styles.logo}>
+                <Link href={'#'} className={styles.logo}>
                     <Image
                         alt="logo"
                         src={'/logo.svg'}

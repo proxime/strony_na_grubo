@@ -10,8 +10,8 @@ export const TechnologiesSection = () => {
             title="Postaw na najlepsze technologie"
             content={
                 <>
-                    Odkryj potęgę najnowszych technologii przy tworzeniu stron
-                    internetowych.{' '}
+                    Odkryj potęgę najnowszych technologii. Zostaw swoją
+                    konkurencję w tyle, dzięki wydajnej stronie internetowej.{' '}
                     <span> Gwarantujemy wyjątkową jakość i efektywność.</span> Z
                     nami Twoja strona internetowa będzie nie tylko funkcjonalna,
                     ale także zoptymalizowana i gotowa na przyszłość.

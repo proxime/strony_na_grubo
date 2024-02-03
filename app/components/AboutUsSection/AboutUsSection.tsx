@@ -10,13 +10,13 @@ export const AboutUsSection = () => {
             title="Kim jesteśmy?"
             content={
                 <>
-                    Jestśmy doświadczonymi twórcami stron internetowych z{' '}
-                    <span>pięcioletnim doświadczeniem</span>, z pasją do
-                    najnowszych technologii. Naszą misją jest nie tylko
-                    tworzenie estetycznych i funkcjonalnych witryn, ale także
-                    dostarczanie innowacyjnych rozwiązań. Sprawiają one, że
-                    strony są przyjemne dla oka, a także efektywne i zgodne z
-                    najnowszymi standardami technologicznymi.
+                    Jesteśmy twórcami stron internetowych z{' '}
+                    <span>pięcioletnim doświadczeniem</span>. Naszą misją jest
+                    nie tylko tworzenie estetycznych i funkcjonalnych witryn,
+                    ale także dostarczanie innowacyjnych rozwiązań. Rozwiązania
+                    te sprawiają, że strony są przyjemne dla oka, a także
+                    efektywne i zgodne z najnowszymi standardami
+                    technologicznymi.
                     <br />
                     <br /> Od projektowania responsywnych interfejsów po
                     integrację zaawansowanych funkcji, jesteśmy gotowi sprostać
@@ -26,14 +26,11 @@ export const AboutUsSection = () => {
                         biznesowych
                     </span>
                     , personalizację i unikalność, dostosowując każdy projekt do
-                    indywidualnych potrzeb Klienta. Zawsze poszukujemy nowych
-                    rozwiązań, aby dostarczyć strony internetowe, które nie
-                    tylko spełniają oczekiwania, ale również przewyższają je.{' '}
-                    <br />
-                    <br /> Dzięki doświadczeniu, zdobytemu w dynamicznym
-                    środowisku projektowania stron internetowych, możemy
-                    zrealizować każdy projekt z profesjonalizmem i
-                    kreatywnością.{' '}
+                    indywidualnych potrzeb. Zawsze poszukujemy nowych rozwiązań,
+                    aby dostarczyć strony internetowe, które spełniają
+                    oczekiwania naszych klientów. <br />
+                    <br /> Dzięki zdobytemu doświadczeniu, możemy zrealizować
+                    każdy projekt z profesjonalizmem i kreatywnością.{' '}
                     <span>
                         Pozwól nam zamienić Twoją wizję w stronę internetową.
                     </span>

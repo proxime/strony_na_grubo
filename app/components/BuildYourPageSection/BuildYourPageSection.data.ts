@@ -3,32 +3,32 @@ import { ProjectStep } from '../ProjectSteps/ProjectSteps';
 export const projectStepsData: ProjectStep[] = [
     {
         description:
-            'Razem określimy nasz wspólny cel, sprecyzujemy wymagania oraz załatwimy wszelkie niezbędne formalności, aby rozpocząć owocną współpracę.',
-        title: 'Podpisujemy umowę',
+            'Rozpoczynamy naszą współpracę od konsultacji z klientem, podczas której omawiamy wstępne oczekiwania, ustalamy termin realizacji oraz dokonujemy wyceny usługi.',
+        title: 'Rozpoczęcie współpracy',
     },
     {
         description:
-            'Projektujemy indywidualny projekt graficzny na makiecie, dostosowywany do wymagań klienta.',
-        title: 'Tworzymy projekt',
+            'Na podstawie zebranych informacji przechodzimy do zrozumienia celów Klienta oraz identyfikacji kluczowych elementów, które będą kształtować unikalny charakter projektowanej strony.',
+        title: 'Zrozumienie potrzeb Klienta',
     },
     {
         description:
-            'Tworzymy unikalne projekty graficzne w oparciu o indywidualne makietowanie, dopasowane do precyzyjnych wymagań naszych klientów.',
-        title: 'Wykonujemy poprawki',
+            'Po dokładnym zrozumieniu Twoich potrzeb selekcjonujemy najbardziej innowacyjne pomysły. Następnie planujemy strukturę i przystępujemy do kwestii wizualnej.',
+        title: 'Projektowanie Interfejsu',
     },
     {
         description:
-            'Przygotowujemy i wdrażamy konkretny projekt zgodnie z wcześniej przygotowaną makietą i wytycznymi klienta.',
-        title: 'Wdrażamy projekt',
+            'Gdy prototyp zostanie zatwierdzony, nasz zespół programistyczny przejmuje inicjatywę. Każdy projekt jest programowany od podstaw, a Ty dostajesz dostęp do wersji testowej, umożliwiającej podgląd naszej pracy.',
+        title: 'Programowanie i testy',
     },
     {
         description:
             'Klient ocenia zrealizowane zadanie, upewniając się, że wszystko zostało wykonane zgodnie z oczekiwaniami.',
-        title: 'Zadowolenie',
+        title: 'Ocena Klienta',
     },
     {
         description:
             'Zapewniając jakość naszych usług, gwarantujemy dostarczenie poprawek w razie ewentualnych błędów po zakończeniu realizacji projektu.',
-        title: 'Gwarancja',
+        title: 'Gwarancja usługi',
     },
 ];

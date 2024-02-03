@@ -16,7 +16,7 @@ export const ProjectSteps = ({ steps }: ProjectStepsProps) => {
             <ul className={styles.list}>
                 {steps.map((step, index) => (
                     <li className={styles.listItem} key={index}>
-                        <div>
+                        <div className={styles.imageWrapper}>
                             <Image
                                 alt="tick"
                                 src={`/tick.svg`}
