@@ -1,9 +1,14 @@
 .navbar {
-    backdrop-filter: blur(108.19999694824219px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(60px);
     box-shadow:
         inset 50px 50px 55px 0 rgba(0, 0, 0, 0.05),
         inset -50px -50px 50px 0 rgba(0, 0, 0, 0.05);
-    background: rgba(11, 10, 7, 0.01);
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 999;
 }
 
 .wrapper {

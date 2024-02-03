@@ -1,12 +1,15 @@
 :root {
-    --max-width: 1400px;
+    --max-width: 1300px;
     --border-radius: 12px;
     --page-padding: 24px;
 
     --white: #fff;
+    --secondary-color: #333;
     --background: #000;
-    --button-border: #242424;
+    --secondary-background: #f5f7fa;
+    --border: #242424;
     --button-bg: #181818;
+    --pink: #f151f1;
 
     --text-gradient: 90deg, #001aff 0%, #a50eda 25%, #fc036d 49.5%, #fd523d 75%,
         #faff00 97%;
@@ -32,4 +35,8 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+.main {
+    padding-bottom: 200px;
 }

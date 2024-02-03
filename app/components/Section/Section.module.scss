@@ -1,0 +1,33 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 588px 1fr;
+    gap: 100px;
+    padding: 0 var(--page-padding);
+    margin: 0 auto;
+    max-width: var(--max-width);
+    margin-top: 200px;
+}
+
+.wrapperReversed {
+    grid-template-columns: 1fr 554px;
+}
+
+.header {
+    font-weight: 700;
+    font-size: 46px;
+    background: linear-gradient(var(--text-gradient));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 34px;
+    width: fit-content;
+}
+
+.paragraph {
+    font-size: 18px;
+    line-height: 1.5;
+
+    span {
+        font-weight: 700;
+    }
+}

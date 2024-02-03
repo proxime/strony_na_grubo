@@ -1,0 +1,20 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    padding: 0;
+}
+
+.listItem {
+    display: flex;
+    gap: 34px;
+
+    h5 {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+
+    p {
+        line-height: 1.35;
+    }
+}

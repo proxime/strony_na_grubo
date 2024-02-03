@@ -1,0 +1,26 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: var(--max-width);
+    padding: 0 var(--page-padding);
+    text-align: center;
+    margin-top: 200px;
+}
+
+.header {
+    font-weight: 700;
+    font-size: 46px;
+    background: linear-gradient(var(--text-gradient));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 auto;
+    margin-bottom: 90px;
+    width: fit-content;
+}
+
+.cards {
+    display: grid;
+    gap: 46px;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+}
