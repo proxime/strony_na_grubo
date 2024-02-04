@@ -8,9 +8,12 @@
     --background: #000;
     --secondary-background: #f5f7fa;
     --border: #242424;
+    --hover-border: #606060;
     --button-bg: #181818;
+    --hover-button-bg: #2e2e2e;
     --pink: #f151f1;
     --error: #a70b0b;
+    --success: #2aad1f;
 
     --text-gradient: 90deg, #001aff 0%, #a50eda 25%, #fc036d 49.5%, #fd523d 75%,
         #faff00 97%;

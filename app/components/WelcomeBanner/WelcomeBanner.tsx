@@ -14,12 +14,9 @@ export const WelcomeBanner = () => {
                     Stwórz własną markę - nie pozwól, aby ograniczała Cię
                     technologia.
                 </p>
-                <div className={styles.buttons}>
-                    <LinkButton href={'#technologies'}>
-                        Dowiedz się więcej
-                    </LinkButton>
-                    <LinkButton href={'#contact'}>Wyceń projekt</LinkButton>
-                </div>
+                <LinkButton href={'#technologies'}>
+                    Dowiedz się więcej
+                </LinkButton>
 
                 <div className={`ornament ${styles.ornament1}`}>
                     <Image

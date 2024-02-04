@@ -63,5 +63,9 @@
         font-size: 16px;
         text-transform: uppercase;
         font-weight: 700;
+
+        &:hover {
+            filter: brightness(1.3);
+        }
     }
 }

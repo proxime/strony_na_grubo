@@ -84,6 +84,31 @@
     align-items: center;
 }
 
+.messageWrapper {
+    display: flex;
+    position: relative;
+
+    textarea {
+        width: 100%;
+    }
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    color: var(--success);
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    width: 100%;
+    padding: 24px 32px;
+    border-top: 1px solid #353535;
+}
+
 .summary {
     display: flex;
     align-items: flex-start;
@@ -147,4 +172,14 @@
     font-size: 20px;
     line-height: 1.2em;
     transition: all 0.3s ease-in-out;
+    width: 220px;
+
+    &:disabled {
+        pointer-events: none;
+    }
+
+    &:hover {
+        border: 1px solid var(--hover-border);
+        background: var(--hover-button-bg);
+    }
 }

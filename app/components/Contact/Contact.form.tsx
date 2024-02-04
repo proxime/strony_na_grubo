@@ -6,13 +6,17 @@ import Image from 'next/image';
 import { useController, useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-
+import { motion } from 'framer-motion';
 import { topicOptions } from './Contact.data';
 import { SelectField } from '../SelectField/SelectField';
 import { useSearchParams } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { Spinner } from '../Spinner/Spinner';
 
 export const ContactForm = () => {
+    const [sending, setSending] = useState(false);
+    const [showNotification, setShowNotification] = useState(false);
+
     const searchParams = useSearchParams();
     const topic = searchParams.get('topic');
 
@@ -25,6 +29,13 @@ export const ContactForm = () => {
         reset,
     } = useForm<ContactFormValues>({
         resolver: yupResolver(ContactFormSchema),
+        defaultValues: {
+            email: '',
+            message: '',
+            name: '',
+            topic: undefined,
+            terms: false,
+        },
     });
 
     const { field: topicField } = useController({
@@ -33,6 +44,7 @@ export const ContactForm = () => {
     });
 
     const handleFormSubmit = handleSubmit(async (data) => {
+        setSending(true);
         const formData = {
             name: data.name,
             email: data.email,
@@ -47,8 +59,17 @@ export const ContactForm = () => {
             });
 
             reset();
+            // @ts-expect-error ignore schema
+            setValue('topic', null);
+            setShowNotification(true);
+
+            setTimeout(() => {
+                setShowNotification(false);
+            }, 6000);
         } catch (err) {
             console.error(err);
+        } finally {
+            setSending(false);
         }
     });
 
@@ -80,6 +101,7 @@ export const ContactForm = () => {
                         ref={topicField.ref}
                         placeholder="Wybierz temat"
                         instanceId={'topic-select'}
+                        aria-label="Topic"
                     />
                 </div>
             </div>
@@ -95,13 +117,39 @@ export const ContactForm = () => {
                 , dodatkowo chciałbym/chciałabym dodać:
             </div>
 
-            <textarea
-                {...register('message')}
-                placeholder="Twoja wiadomość"
-                maxLength={5000}
-                className={montserrat.className}
-                data-error={!!errors.message}
-            />
+            <div className={styles.messageWrapper}>
+                <textarea
+                    {...register('message')}
+                    placeholder="Twoja wiadomość"
+                    maxLength={5000}
+                    className={montserrat.className}
+                    data-error={!!errors.message}
+                />
+
+                {showNotification && (
+                    <motion.div
+                        className={styles.notification}
+                        initial={{
+                            opacity: 0,
+                        }}
+                        animate={{
+                            opacity: 1,
+                        }}
+                        exit={{
+                            opacity: 0,
+                        }}
+                    >
+                        <Image
+                            alt="success"
+                            src={'/success.svg'}
+                            width={32}
+                            height={32}
+                        />
+                        Wiadomość została pomyślnie wysłana. Postaramy się
+                        odpowiedzieć jak najszybciej to możliwe.
+                    </motion.div>
+                )}
+            </div>
 
             <div className={styles.summary}>
                 <label className={styles.checkboxWrapper}>
@@ -123,7 +171,15 @@ export const ContactForm = () => {
                     </p>
                 </label>
 
-                <button className={styles.button}>Wyślij wiadomość</button>
+                <button disabled={sending} className={styles.button}>
+                    {sending ? (
+                        <>
+                            <Spinner /> Wysyłanie
+                        </>
+                    ) : (
+                        'Wyślij wiadomość'
+                    )}
+                </button>
             </div>
         </form>
     );
@@ -146,7 +202,7 @@ const ContactFormSchema = yup.object({
         .trim()
         .max(5000, 'Wiadomość za długa')
         .required('Wprowadź wiadomość'),
-    terms: yup.boolean().required().isTrue('Zgoda jest wymagana'),
+    terms: yup.boolean().required().oneOf([true], 'Zgoda jest wymagana'),
 });
 
 export type ContactFormValues = yup.InferType<typeof ContactFormSchema>;

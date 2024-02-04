@@ -14,4 +14,9 @@
     font-size: 20px;
     line-height: 1.2em;
     transition: all 0.3s ease-in-out;
+
+    &:hover {
+        border: 1px solid var(--hover-border);
+        background: var(--hover-button-bg);
+    }
 }
