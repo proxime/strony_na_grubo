@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { montserrat } from '@assets/fonts';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 import { Footer } from './components/Footer/Footer';
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
@@ -12,19 +13,15 @@ const Navbar = dynamic(() => import('@components/Navbar/Navbar'), {
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://stronynagrubo.pl'),
+    metadataBase: new URL('https://www.stronynagrubo.pl'),
     title: 'Strony Na Grubo - Wydajne strony internetowe w Next.js',
     description:
         'Tworzymy nowoczesne i wydajne strony internetowych przy pomocy najlepszych technologii, takich jak Next.js',
-    keywords:
-        'tworzenie stron internetowych, jak zrobić stronę, strona internetowa, strona wizytówkowa, strona internetowa cena, sklep internetowy',
-    category: 'tworzenie stron internetowych',
-    creator: 'Strony Na Grubo',
     openGraph: {
         images: '/banner.JPG',
         type: 'website',
         locale: 'pl_PL',
-        url: 'https://stronynagrubo.pl',
+        url: 'https://www.stronynagrubo.pl',
         siteName: 'Strony Na Grubo',
         title: 'Strony Na Grubo - Wydajne strony internetowe w Next.js',
         description:
@@ -33,7 +30,7 @@ export const metadata: Metadata = {
     twitter: {
         images: '/banner.JPG',
         card: 'summary_large_image',
-        siteId: 'https://stronynagrubo.pl',
+        siteId: 'https://www.stronynagrubo.pl',
         title: 'Strony Na Grubo - Wydajne strony internetowe w Next.js',
         description:
             'Tworzymy nowoczesne i wydajne strony internetowych przy pomocy najlepszych technologii, takich jak Next.js',
@@ -54,6 +51,7 @@ export default function RootLayout({
                 {children}
                 <Footer />
 
+                <Analytics />
                 <SpeedInsights />
             </body>
         </html>
