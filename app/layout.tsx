@@ -13,7 +13,7 @@ const Navbar = dynamic(() => import('@components/Navbar/Navbar'), {
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://www.stronynagrubo.pl'),
+    metadataBase: new URL('https://stronynagrubo.pl'),
     title: 'Strony Na Grubo - Wydajne strony internetowe w Next.js',
     description:
         'Tworzymy nowoczesne i wydajne strony internetowych przy pomocy najlepszych technologii, takich jak Next.js',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         images: '/banner.JPG',
         type: 'website',
         locale: 'pl_PL',
-        url: 'https://www.stronynagrubo.pl',
+        url: 'https://stronynagrubo.pl',
         siteName: 'Strony Na Grubo',
         title: 'Strony Na Grubo - Wydajne strony internetowe w Next.js',
         description:
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     twitter: {
         images: '/banner.JPG',
         card: 'summary_large_image',
-        siteId: 'https://www.stronynagrubo.pl',
+        siteId: 'https://stronynagrubo.pl',
         title: 'Strony Na Grubo - Wydajne strony internetowe w Next.js',
         description:
             'Tworzymy nowoczesne i wydajne strony internetowych przy pomocy najlepszych technologii, takich jak Next.js',
