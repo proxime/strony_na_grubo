@@ -22,6 +22,7 @@ export const ContactForm = () => {
         register,
         control,
         setValue,
+        reset,
     } = useForm<ContactFormValues>({
         resolver: yupResolver(ContactFormSchema),
     });
@@ -31,8 +32,24 @@ export const ContactForm = () => {
         name: 'topic',
     });
 
-    const handleFormSubmit = handleSubmit((data) => {
-        console.log(data);
+    const handleFormSubmit = handleSubmit(async (data) => {
+        const formData = {
+            name: data.name,
+            email: data.email,
+            message: data.message,
+            topic: data.topic.value,
+        };
+
+        try {
+            await fetch('/api/email', {
+                method: 'POST',
+                body: JSON.stringify(formData),
+            });
+
+            reset();
+        } catch (err) {
+            console.error(err);
+        }
     });
 
     useEffect(() => {
