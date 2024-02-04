@@ -5,16 +5,9 @@ import styles from './ScrollFollowLine.module.scss';
 
 export interface ScrollFollowLineProps {
     maxHeight: number;
-    position: {
-        x: number;
-        y: number;
-    };
 }
 
-export const ScrollFollowLine = ({
-    maxHeight,
-    position,
-}: ScrollFollowLineProps) => {
+export const ScrollFollowLine = ({ maxHeight }: ScrollFollowLineProps) => {
     const [lineHeight, setLineHeight] = useState(0);
     const wrapperRef = useRef<HTMLDivElement>(null);
 
@@ -50,8 +43,6 @@ export const ScrollFollowLine = ({
             className={styles.wrapper}
             style={{
                 height: `${maxHeight}px`,
-                left: `${position.x}px`,
-                top: `${position.y}px`,
             }}
         >
             <div

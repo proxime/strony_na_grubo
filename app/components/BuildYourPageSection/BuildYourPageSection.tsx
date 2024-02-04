@@ -28,21 +28,19 @@ export const BuildYourPageSection = () => {
                     </span>{' '}
                     staje się nie tyle luksusem, co koniecznością.
                     <div className={styles.buttonWrapper}>
-                        <LinkButton href={'#contact'}>Wyceń projekt</LinkButton>
+                        <LinkButton href={'#pricing'}>Wyceń projekt</LinkButton>
                     </div>
-                    <WebAnimation />
+                    <div className={styles.animationWrapper}>
+                        <WebAnimation />
+                    </div>
                 </>
             }
         >
             <div className={styles.stepsWrapper}>
                 <ProjectSteps steps={projectStepsData} />
-                <ScrollFollowLine
-                    maxHeight={990}
-                    position={{
-                        x: 15,
-                        y: 150,
-                    }}
-                />
+                <div className={styles.lineWrapper}>
+                    <ScrollFollowLine maxHeight={1250} />
+                </div>
             </div>
         </Section>
     );

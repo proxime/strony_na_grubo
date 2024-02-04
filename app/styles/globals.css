@@ -19,6 +19,12 @@
         #faff00 97%;
 }
 
+@media (max-width: 576px) {
+    :root {
+        --page-padding: 16px;
+    }
+}
+
 * {
     box-sizing: border-box;
     padding: 0;

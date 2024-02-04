@@ -5,6 +5,10 @@
     text-align: center;
     margin-top: 100px;
     padding-top: 100px;
+
+    @media (max-width: 992px) {
+        margin-top: 60px;
+    }
 }
 
 .header {
@@ -17,6 +21,18 @@
     margin: 0 auto;
     margin-bottom: 90px;
     width: fit-content;
+
+    @media (max-width: 1124px) {
+        font-size: 36px;
+    }
+
+    @media (max-width: 992px) {
+        margin-bottom: 60px;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 28px;
+    }
 }
 
 .cards {
@@ -24,4 +40,15 @@
     gap: 46px;
     grid-template-columns: repeat(3, 1fr);
     align-items: flex-start;
+
+    @media (max-width: 1200px) {
+        gap: 24px;
+    }
+
+    @media (max-width: 992px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 46px;
+    }
 }

@@ -1,8 +1,18 @@
+'use client';
+
 import Image from 'next/image';
 import styles from './Navbar.module.scss';
 import Link from 'next/link';
+import { useMediaQuery } from 'react-responsive';
+import { NavbarMobile } from './Navbar.moblie';
 
 export const Navbar = () => {
+    const isMobile = useMediaQuery({
+        query: '(max-width: 576px)',
+    });
+
+    if (isMobile) return <NavbarMobile />;
+
     return (
         <nav className={styles.navbar}>
             <div className={styles.wrapper}>
@@ -34,3 +44,5 @@ export const Navbar = () => {
         </nav>
     );
 };
+
+export default Navbar;

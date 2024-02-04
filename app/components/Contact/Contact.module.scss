@@ -5,6 +5,10 @@
     text-align: center;
     margin-top: 100px;
     padding-top: 100px;
+
+    @media (max-width: 992px) {
+        margin-top: 60px;
+    }
 }
 
 .header {
@@ -17,6 +21,18 @@
     margin: 0 auto;
     margin-bottom: 90px;
     width: fit-content;
+
+    @media (max-width: 1124px) {
+        font-size: 36px;
+    }
+
+    @media (max-width: 992px) {
+        margin-bottom: 60px;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 28px;
+    }
 }
 
 .form {
@@ -62,7 +78,7 @@
     input {
         height: 46px;
         display: inline-block;
-        margin: 0 6px;
+        margin: 0 8px;
         min-width: 300px;
         padding: 10px 20px;
     }
@@ -72,16 +88,79 @@
         height: 260px;
         padding: 20px;
     }
+
+    @media (max-width: 1200px) {
+        font-size: 18px;
+
+        input,
+        textarea {
+            font-size: 16px;
+        }
+
+        input {
+            min-width: 260px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        gap: 16px;
+
+        input {
+            margin-right: 0;
+            flex-grow: 1;
+        }
+    }
+
+    @media (max-width: 576px) {
+        input {
+            margin-left: 0;
+        }
+    }
 }
 
 .selectWrapper {
     flex-grow: 1;
     margin-left: 6px;
+    width: 200px;
+
+    @media (max-width: 576px) {
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 .formRow {
     display: flex;
     align-items: center;
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+}
+
+.formRowInner {
+    display: flex;
+    align-items: center;
+
+    p {
+        flex-shrink: 0;
+
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+
+    &:last-of-type {
+        flex-grow: 1;
+    }
+
+    @media (max-width: 576px) {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
 }
 
 .messageWrapper {
@@ -107,6 +186,11 @@
     width: 100%;
     padding: 24px 32px;
     border-top: 1px solid #353535;
+
+    @media (max-width: 576px) {
+        font-size: 14px;
+        padding: 16px 24px;
+    }
 }
 
 .summary {
@@ -114,6 +198,12 @@
     align-items: flex-start;
     margin-top: 40px;
     justify-content: space-between;
+    gap: 32px;
+
+    @media (max-width: 576px) {
+        flex-direction: column;
+        margin-top: 24px;
+    }
 }
 
 .checkboxWrapper {
@@ -146,6 +236,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 
     &[data-error='true'] {
         border-color: var(--error);
@@ -181,5 +272,12 @@
     &:hover {
         border: 1px solid var(--hover-border);
         background: var(--hover-button-bg);
+    }
+
+    @media (max-width: 576px) {
+        font-size: 14px;
+        height: 46px;
+        padding: 0 20px;
+        align-self: center;
     }
 }

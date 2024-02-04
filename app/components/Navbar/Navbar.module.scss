@@ -32,8 +32,39 @@
     a:hover {
         color: var(--pink);
     }
+
+    @media (max-width: 576px) {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        a {
+            display: block;
+            padding: 16px 0;
+        }
+    }
 }
 
 .logo {
     display: flex;
+}
+
+.mobileMenuButton {
+    background: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
+}
+
+.mobileMenu {
+    position: fixed;
+    background-color: var(--background);
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 80px;
+    height: 100vh;
+    padding: 16px var(--page-padding);
+    border-top: 1px solid var(--border);
+    overflow: hidden;
 }

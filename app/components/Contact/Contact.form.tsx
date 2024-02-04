@@ -83,38 +83,48 @@ export const ContactForm = () => {
     return (
         <form className={styles.form} onSubmit={handleFormSubmit}>
             <div className={styles.formRow}>
-                Cześć, nazywam się{' '}
-                <input
-                    {...register('name')}
-                    className={montserrat.className}
-                    type="text"
-                    placeholder="Imię i nazwisko"
-                    data-error={!!errors.name}
-                />
-                , jestem zainteresowany/a{' '}
-                <div className={styles.selectWrapper}>
-                    <SelectField
-                        options={topicOptions}
-                        error={!!errors.topic}
-                        onChange={(newValue) => topicField.onChange(newValue)}
-                        value={topicField.value}
-                        ref={topicField.ref}
-                        placeholder="Wybierz temat"
-                        instanceId={'topic-select'}
-                        aria-label="Topic"
+                <div className={styles.formRowInner}>
+                    <p>Cześć, nazywam się</p>{' '}
+                    <input
+                        {...register('name')}
+                        className={montserrat.className}
+                        type="text"
+                        placeholder="Imię i nazwisko"
+                        data-error={!!errors.name}
                     />
+                </div>
+                <div className={styles.formRowInner}>
+                    <p>Jestem zainteresowany/a</p>{' '}
+                    <div className={styles.selectWrapper}>
+                        <SelectField
+                            options={topicOptions}
+                            error={!!errors.topic}
+                            onChange={(newValue) =>
+                                topicField.onChange(newValue)
+                            }
+                            value={topicField.value}
+                            ref={topicField.ref}
+                            placeholder="Wybierz temat"
+                            instanceId={'topic-select'}
+                            aria-label="Topic"
+                        />
+                    </div>
                 </div>
             </div>
             <div className={styles.formRow}>
-                Mój adres email to{' '}
-                <input
-                    {...register('email')}
-                    type="email"
-                    placeholder="Email"
-                    className={montserrat.className}
-                    data-error={!!errors.email}
-                />
-                , dodatkowo chciałbym/chciałabym dodać:
+                <div className={styles.formRowInner}>
+                    <p>Mój adres email to</p>{' '}
+                    <input
+                        {...register('email')}
+                        type="email"
+                        placeholder="Email"
+                        className={montserrat.className}
+                        data-error={!!errors.email}
+                    />
+                </div>
+                <div className={styles.formRowInner}>
+                    <p>Dodatkowo chciałbym/chciałabym dodać:</p>
+                </div>
             </div>
 
             <div className={styles.messageWrapper}>
@@ -146,7 +156,7 @@ export const ContactForm = () => {
                             height={32}
                         />
                         Wiadomość została pomyślnie wysłana. Postaramy się
-                        odpowiedzieć jak najszybciej to możliwe.
+                        odpowiedzieć najszybciej jak to możliwe.
                     </motion.div>
                 )}
             </div>

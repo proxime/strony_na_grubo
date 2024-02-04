@@ -27,7 +27,7 @@ export const Section = ({
         <motion.div
             initial={{
                 opacity: 0,
-                x: 200,
+                x: 150,
             }}
             whileInView={{
                 opacity: 1,

@@ -1,9 +1,37 @@
 .stepsWrapper {
     padding-top: 150px;
     position: relative;
+    height: 100%;
+    overflow: hidden;
+
+    @media (max-width: 992px) {
+        text-align: left;
+        padding-top: 0;
+    }
 }
 
 .buttonWrapper {
     width: 240px;
     margin-top: 32px;
+
+    @media (max-width: 992px) {
+        margin: 32px auto 0;
+    }
+}
+
+.animationWrapper {
+    @media (max-width: 992px) {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+.lineWrapper {
+    position: absolute;
+    left: 15px;
+    top: 150px;
+
+    @media (max-width: 992px) {
+        top: 0;
+    }
 }

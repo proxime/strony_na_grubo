@@ -1,10 +1,15 @@
 import type { Metadata } from 'next';
 import { montserrat } from '@assets/fonts';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Footer } from './components/Footer/Footer';
+import { Suspense } from 'react';
+import dynamic from 'next/dynamic';
 
 import '@styles/globals.css';
-import { Navbar } from './components/Navbar/Navbar';
-import { Footer } from './components/Footer/Footer';
+
+const Navbar = dynamic(() => import('@components/Navbar/Navbar'), {
+    ssr: false,
+});
 
 export const metadata: Metadata = {
     title: 'Strony Na Grubo',
@@ -19,7 +24,9 @@ export default function RootLayout({
     return (
         <html lang="pl">
             <body className={montserrat.className}>
-                <Navbar />
+                <Suspense fallback={null}>
+                    <Navbar />
+                </Suspense>
                 {children}
                 <Footer />
 

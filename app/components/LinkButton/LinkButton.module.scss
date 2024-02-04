@@ -19,4 +19,10 @@
         border: 1px solid var(--hover-border);
         background: var(--hover-button-bg);
     }
+
+    @media (max-width: 576px) {
+        font-size: 14px;
+        height: 46px;
+        padding: 0 20px;
+    }
 }

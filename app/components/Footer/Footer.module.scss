@@ -7,6 +7,14 @@
     padding: 100px var(--page-padding) 32px;
     max-width: var(--max-width);
     margin: 0 auto;
+
+    @media (max-width: 992px) {
+        padding-top: 70px;
+    }
+
+    @media (max-width: 576px) {
+        padding-top: 40px;
+    }
 }
 
 .head {
@@ -21,6 +29,12 @@
         font-size: 20px;
         color: var(--pink);
     }
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 26px;
+    }
 }
 
 .title {
@@ -33,6 +47,14 @@
         letter-spacing: 0em;
         color: #000;
     }
+
+    @media (max-width: 576px) {
+        flex-direction: column;
+
+        h2 {
+            font-size: 28px;
+        }
+    }
 }
 
 .content {
@@ -42,6 +64,19 @@
     padding: 80px 0 40px;
     border-bottom: 1px solid var(--secondary-color);
     font-size: 20px;
+
+    @media (max-width: 992px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 14px;
+        padding: 40px 0;
+        gap: 40px;
+    }
 }
 
 .links {
@@ -49,6 +84,16 @@
     gap: 100px;
     grid-template-columns: 80px 238px;
     justify-content: flex-end;
+
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 576px) {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
 }
 
 .list {
