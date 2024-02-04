@@ -16,7 +16,7 @@ export const Footer = () => {
                         />
                         <h2>Strony Na Grubo</h2>
                     </div>
-                    <p>Adres-email</p>
+                    <p>stronynagrubo@gmail.com</p>
                 </div>
 
                 <div className={styles.content}>

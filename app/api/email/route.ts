@@ -57,7 +57,7 @@ export async function POST(request: NextRequest) {
 
         const mailOptions: Mail.Options = {
             from: `Wiadmomość <${email}>`,
-            to: process.env.EMAIL,
+            to: process.env.RESPONSE_EMAIL,
             subject: `Wiadomość od ${name} (${email})`,
             ...generateEmailContent({ email, name, topic, message }),
         };
