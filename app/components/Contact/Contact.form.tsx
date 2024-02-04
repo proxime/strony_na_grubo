@@ -162,7 +162,10 @@ export const ContactForm = () => {
             </div>
 
             <div className={styles.summary}>
-                <label className={styles.checkboxWrapper}>
+                <label
+                    className={styles.checkboxWrapper}
+                    data-error={!!errors.terms}
+                >
                     <input {...register('terms')} type="checkbox" hidden />
                     <div
                         className={styles.checkboxLabel}
@@ -176,7 +179,7 @@ export const ContactForm = () => {
                         />
                     </div>
                     <p>
-                        Zgadzam się na przetwarzanie danych osobowych na
+                        * Zgadzam się na przetwarzanie danych osobowych na
                         potrzeby formularza
                     </p>
                 </label>

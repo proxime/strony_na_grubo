@@ -215,6 +215,10 @@
     line-height: 24px;
     user-select: none;
 
+    &[data-error='true'] {
+        color: var(--error);
+    }
+
     input {
         display: none;
     }

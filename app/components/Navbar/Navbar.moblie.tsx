@@ -70,16 +70,16 @@ export const NavbarMobile = () => {
                     >
                         <ul className={styles.links}>
                             <li>
-                                <Link href="#about-us">O nas</Link>
+                                <Link href="#o-nas">O nas</Link>
                             </li>
                             <li>
-                                <Link href="#offer">Oferta</Link>
+                                <Link href="#oferta">Oferta</Link>
                             </li>
                             <li>
-                                <Link href="#pricing">Cennik</Link>
+                                <Link href="#cennik">Cennik</Link>
                             </li>
                             <li>
-                                <Link href="#contact">Kontakt</Link>
+                                <Link href="#kontakt">Kontakt</Link>
                             </li>
                         </ul>
                     </motion.div>

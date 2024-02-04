@@ -5,7 +5,7 @@ import styles from './AboutUsSection.module.scss';
 export const AboutUsSection = () => {
     return (
         <Section
-            id="about-us"
+            id="o-nas"
             isReversed
             title="Kim jesteśmy?"
             content={

@@ -8,7 +8,7 @@ import styles from './Prices.module.scss';
 
 export const Prices = () => {
     return (
-        <section id="pricing" className={styles.wrapper}>
+        <section id="cennik" className={styles.wrapper}>
             <h2 className={styles.header}>Cennik usług</h2>
             <div className={styles.cards}>
                 <PriceCard
@@ -16,21 +16,21 @@ export const Prices = () => {
                     options={simplePageOptions}
                     price="3500"
                     title="Strona wizytówka"
-                    link="?topic=basic#contact"
+                    link="?topic=basic#kontakt"
                 />
                 <PriceCard
                     buttonGradient="90deg, #3494b8 0%, #239e8c 100%"
                     options={extendedPageOptions}
                     price="6000"
                     title="Spersonalizowana strona"
-                    link="?topic=extended#contact"
+                    link="?topic=extended#kontakt"
                 />
                 <PriceCard
                     buttonGradient="90deg, #ee493f 0%, #f6b04a 100%"
                     options={commercePageOptions}
                     price="9999"
                     title="E-commerce"
-                    link="?topic=ecommerce#contact"
+                    link="?topic=ecommerce#kontakt"
                 />
             </div>
         </section>

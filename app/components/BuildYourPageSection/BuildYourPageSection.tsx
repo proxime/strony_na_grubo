@@ -9,7 +9,7 @@ import { ScrollFollowLine } from '../ScrollFollowLine/ScrollFollowLine';
 export const BuildYourPageSection = () => {
     return (
         <Section
-            id="offer"
+            id="oferta"
             title="Zbuduj nowoczesną stronę z użyciem Next.js"
             content={
                 <>
@@ -28,7 +28,7 @@ export const BuildYourPageSection = () => {
                     </span>{' '}
                     staje się nie tyle luksusem, co koniecznością.
                     <div className={styles.buttonWrapper}>
-                        <LinkButton href={'#pricing'}>Wyceń projekt</LinkButton>
+                        <LinkButton href={'#cennik'}>Wyceń projekt</LinkButton>
                     </div>
                     <div className={styles.animationWrapper}>
                         <WebAnimation />
