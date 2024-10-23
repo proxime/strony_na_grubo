@@ -14,14 +14,14 @@ export const Prices = () => {
                 <PriceCard
                     buttonGradient="90deg, #c62c50 0%, #a33c72 52.5%, #77458a 100%"
                     options={simplePageOptions}
-                    price="3500"
+                    price="2500"
                     title="Strona wizytówka"
                     link="?topic=basic#kontakt"
                 />
                 <PriceCard
                     buttonGradient="90deg, #3494b8 0%, #239e8c 100%"
                     options={extendedPageOptions}
-                    price="6000"
+                    price="4500"
                     title="Spersonalizowana strona"
                     link="?topic=extended#kontakt"
                 />
